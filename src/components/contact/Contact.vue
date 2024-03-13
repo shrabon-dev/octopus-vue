@@ -38,7 +38,10 @@
 <script>
 import flogo from '../../assets/images/flogo.png'
 import {gsap} from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { InViewport } from 'gsap/InViewport';
 // gsap.registerPlugin(InViewport);
+gsap.registerPlugin(ScrollTrigger,);
 export default {
     name:'Contact',
     data(){
@@ -49,27 +52,32 @@ export default {
     mounted(){
       gsap.fromTo('.contactTile',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5,scrollTrigger:{
         trigger:'.contactTile',
-        start:'top 10%',
-        end:'bottom 30%',
+        start: 'top bottom', // Start animation when the top of the trigger hits the bottom of the viewport
+      end: 'bottom top', //
         scrub:true,
-        isInViewport:true,
         
       }});
       gsap.fromTo('.contactPerag',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5,scrollTrigger:{
         trigger:'.contactPerag',
-        start:'top 10%',
-        end:'bottom 30%',
+        start: 'top bottom', // Start animation when the top of the trigger hits the bottom of the viewport
+      end: 'bottom top', //
         scrub:true,
-        isInViewport:true,
       }});
       gsap.fromTo('.input',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,stagger:.1,ease:'sine.inOut',duration:.5,scrollTrigger:{
         trigger:'.input',
-        start:'top 10%',
-        end:'bottom 10%',
+        start: 'top bottom', // Start animation when the top of the trigger hits the bottom of the viewport
+      end: 'bottom top', //
         scrub:true,
-        isInViewport:true,
+        onUpdate:this.scrollElement,
       }});
+    },
+    methods:{
+      scrollElement(){
+
+        console.log(ScrollTrigger.isInViewport('.input'))
+      }
     }
+
 }
 </script>
 

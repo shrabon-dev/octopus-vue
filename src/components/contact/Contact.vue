@@ -65,16 +65,16 @@ export default {
       }});
       gsap.fromTo('.input',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,stagger:.1,ease:'sine.inOut',duration:.5,scrollTrigger:{
         trigger:'.input',
-        start: 'top bottom', // Start animation when the top of the trigger hits the bottom of the viewport
-      end: 'bottom top', //
+        start: 'top 100%', // Start animation when the top of the trigger hits the bottom of the viewport
+      end: 'bottom 50%', //
         scrub:true,
         onUpdate:this.scrollElement,
       }});
     },
     methods:{
       scrollElement(){
+        return ScrollTrigger.isInViewport('.input')
 
-        console.log(ScrollTrigger.isInViewport('.input'))
       }
     }
 

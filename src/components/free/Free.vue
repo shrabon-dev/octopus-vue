@@ -45,31 +45,36 @@ export default {
               trigger:'.free',
               start: 'top 80%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true // Smooth animation
+              scrub: true,
+              isInViewport:true, // Smooth animation
             }})
         gsap.fromTo('.like',{translateY:-300,},{translateY:0,opacity:1,duration:10, scrollTrigger: {
               trigger:'.like',
               start: 'top 80%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true // Smooth animation
+              scrub: true,
+              isInViewport:true, // Smooth animation
             }})
         gsap.fromTo('.downloadBtn',{translateX: 100,},{translateX:0,opacity:1,duration:10, scrollTrigger: {
               trigger:'.downloadBtn',
               start: 'top 280%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true // Smooth animation
+              scrub: true ,
+              isInViewport:true,// Smooth animation
             }})
         gsap.fromTo('.freeImgAnime',{scale:3,},{scale:1,opacity:1,duration:10, scrollTrigger: {
               trigger:'.freeImgAnime',
               start: 'top 250%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true // Smooth animation
+              scrub: true,
+              isInViewport:true, // Smooth animation
             }})
         gsap.fromTo('.freeText',{scale:3,},{scale:1,opacity:1,duration:10, scrollTrigger: {
               trigger:'.freeText',
               start: 'top 250%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true // Smooth animation
+              scrub: true,
+              isInViewport:true,
             }})
     },
 

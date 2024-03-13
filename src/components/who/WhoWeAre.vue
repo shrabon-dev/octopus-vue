@@ -31,7 +31,8 @@ export default {
               trigger:'.leftToRightT',
               start: 'top 120%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true // Smooth animation
+              scrub: true,
+              isInViewport:true, // Smooth animation
             } });
     },
     methods:{
@@ -60,7 +61,8 @@ export default {
               trigger:span,
               start: 'top 120%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true // Smooth animation
+              scrub: true,
+              isInViewport:true, // Smooth animation
             } }, index * 0.1); 
         });
     }

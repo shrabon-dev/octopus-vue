@@ -38,6 +38,7 @@
 <script>
 import flogo from '../../assets/images/flogo.png'
 import {gsap} from 'gsap';
+// gsap.registerPlugin(InViewport);
 export default {
     name:'Contact',
     data(){
@@ -51,18 +52,22 @@ export default {
         start:'top 80%',
         end:'bottom 30%',
         scrub:true,
+        isInViewport:true,
+        
       }});
       gsap.fromTo('.contactPerag',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5,scrollTrigger:{
         trigger:'.contactPerag',
         start:'top 80%',
         end:'bottom 30%',
         scrub:true,
+        isInViewport:true,
       }});
       gsap.fromTo('.input',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,stagger:.1,ease:'sine.inOut',duration:.5,scrollTrigger:{
         trigger:'.input',
         start:'top 105%',
         end:'bottom 50%',
         scrub:true,
+        isInViewport:true,
       }});
     }
 }

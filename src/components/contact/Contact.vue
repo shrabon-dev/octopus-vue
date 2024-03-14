@@ -52,14 +52,14 @@ export default {
     mounted(){
       gsap.fromTo('.contactTile',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5,scrollTrigger:{
         trigger:'.contactTile',
-        start: 'top bottom', // Start animation when the top of the trigger hits the bottom of the viewport
+        start: 'top 100%', // Start animation when the top of the trigger hits the bottom of the viewport
       end: 'bottom top', //
         scrub:true,
         
       }});
       gsap.fromTo('.contactPerag',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5,scrollTrigger:{
         trigger:'.contactPerag',
-        start: 'top bottom', // Start animation when the top of the trigger hits the bottom of the viewport
+        start: 'top 100%', // Start animation when the top of the trigger hits the bottom of the viewport
       end: 'bottom top', //
         scrub:true,
       }});

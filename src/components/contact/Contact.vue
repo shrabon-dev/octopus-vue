@@ -1,5 +1,5 @@
 <template>
-  <section class="py-100 sm-pb-50 md-pb-0">
+  <section class="py-100 sm-pb-50 md-pb-0 contactSec">
     <div class="container-fluid py-100 sm-pb-50 md-pt-0">
         <div class="title center">
             <h3 class="contactTile">Have a Question?</h3>
@@ -172,6 +172,9 @@ button{
     }
     .sm-pb-50{
       padding-bottom: 50px !important;
+    }
+    .contactSec{
+      padding-top: 0px !important;
     }
  }
 @media (min-width:576px) and (max-width:999px) {

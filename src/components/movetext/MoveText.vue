@@ -96,7 +96,7 @@ export default {
  }
  @media (min-width:300px) and (max-width:575px) {
   .moveText{
-    padding: 50px 0;
+    padding: 100px 0;
   }
   h4{
     font-size: 40px;
@@ -104,6 +104,8 @@ export default {
   .line img{
     height: 90px;
   }
-
+  .rot-1{
+    bottom: -75px;
+  }
  }
 </style>

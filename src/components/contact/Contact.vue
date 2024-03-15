@@ -57,7 +57,7 @@ export default {
         end: "bottom 50%",
         invalidateOnRefresh: true,
         scrub: 1,
-        markers: true
+
       }});
       gsap.fromTo('.contactPerag',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5, scrollTrigger: {
         trigger:".contactPerag",
@@ -65,7 +65,7 @@ export default {
         end: "bottom 50%",
         invalidateOnRefresh: true,
         scrub: 1,
-        markers: true
+
       } });
       gsap.fromTo('.input',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,stagger:.1,ease:'sine.inOut',duration:.5, scrollTrigger: {
         trigger:".input",
@@ -73,7 +73,7 @@ export default {
         end: "bottom 50%",
         invalidateOnRefresh: true,
         scrub: 1,
-        markers: true
+
       }});
     },
     methods:{

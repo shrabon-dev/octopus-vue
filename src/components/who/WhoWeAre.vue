@@ -30,9 +30,9 @@ export default {
         gsap.fromTo('.leftToRightT',{y: 100,opacity:0},{y:0,opacity:1,duration:.5,scrollTrigger: {
               trigger:'.leftToRightT',
               start: 'top 120%', // Adjust trigger start position as needed
-              end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true,
-              isInViewport:true, // Smooth animation
+              end: 'bottom 20%',
+              invalidateOnRefresh: true,
+              scrub: 1, // Smooth animation
             } });
     },
     methods:{
@@ -60,9 +60,9 @@ export default {
             tl.fromTo(span, { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: 'sine.inOut', scrollTrigger: {
               trigger:span,
               start: 'top 120%', // Adjust trigger start position as needed
-              end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true,
-              isInViewport:true, // Smooth animation
+              end: 'bottom 20%',
+              invalidateOnRefresh: true,
+              scrub: 1,// Smooth animation
             } }, index * 0.1); 
         });
     }

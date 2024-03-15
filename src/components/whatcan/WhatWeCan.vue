@@ -32,16 +32,16 @@ export default {
               trigger: text,
               start: 'top 100%', // Adjust trigger start position as needed
               end: 'bottom 60%', // Adjust trigger end position as needed
-              scrub: true,
-              isInViewport:true, // Smooth animation
+              invalidateOnRefresh: true,
+              scrub: 1, // Smooth animation
             }})
          })
          gsap.fromTo('.leftToRight',{translateX:-200,},{translateX:0,opacity:1,duration:10, scrollTrigger: {
               trigger:'.leftToRight',
               start: 'top 80%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed
-              scrub: true,
-              isInViewport:true, // Smooth animation
+              invalidateOnRefresh: true,
+              scrub: 1, // Smooth animation
             }})
       }
     }

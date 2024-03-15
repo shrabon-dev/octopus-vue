@@ -145,6 +145,7 @@ export default {
 <style scoped>
 #imgSec{
   padding-top: 400px;
+  overflow-x: hidden;
 }
 .img{
   max-width: 300px;

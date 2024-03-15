@@ -51,15 +51,9 @@ export default {
     },
     mounted(){
 
-      // gsap.fromTo('.contactTile',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5,scrollTrigger:{
-      //   trigger:'.contactTile',
-      // }});
-      // gsap.fromTo('.contactPerag',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5,scrollTrigger:{
-      //   trigger:'.contactPerag' 
-      // }});
-      // gsap.fromTo('.input',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,stagger:.1,ease:'sine.inOut',duration:.5,scrollTrigger:{
-      //   trigger:'.input', 
-      // }});
+      gsap.fromTo('.contactTile',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5});
+      gsap.fromTo('.contactPerag',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,duration:.5 });
+      gsap.fromTo('.input',{y:100,scale:.5,opacity:0},{y:0,scale:1,opacity:1,stagger:.1,ease:'sine.inOut',duration:.5});
     },
     methods:{
       scrollElement(){

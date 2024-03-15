@@ -1,5 +1,5 @@
 <template>
-  <section class="py-100" id="imgSec">
+  <section class="py-100 overflow-x-hidden overflow-y-hidden" id="imgSec">
     <div class="rotate">
       <div  ref="leftMoved" class="flex-justify ">
       <div class="img">

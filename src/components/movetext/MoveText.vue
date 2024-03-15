@@ -1,5 +1,5 @@
 <template>
-  <section class="moveText relative">
+  <section class="moveText relative overflow-x-hidden overflow-y-hidden">
     <div class="line rot-1">
     <img :src="line" alt="line" >
     <h4 class="text">

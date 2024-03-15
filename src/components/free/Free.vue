@@ -1,5 +1,5 @@
 <template>
-  <section class="py-100">
+  <section class="py-100 overflow-x-hidden overflow-y-hidden">
     <div class="container-fluid">
         <div class="flex-justify-stretch py-100">
             <div class="col-4 col-full">

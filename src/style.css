@@ -15,6 +15,12 @@ body{
 
   /* font-family: "Indie Flower", cursive; */
 }
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+.overflow-y-hidden{
+  overflow-y: hidden;
+}
 :root{
   --bg-color:#FFCF4E;
 }

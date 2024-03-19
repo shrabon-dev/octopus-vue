@@ -48,7 +48,7 @@ export default {
               invalidateOnRefresh: true,
               scrub: 1, // Smooth animation
             }})
-        gsap.fromTo('.like',{translateY:-300,},{translateY:0,opacity:1,duration:10, scrollTrigger: {
+        gsap.fromTo('.like',{translateY:-200,},{translateY:0,opacity:1,duration:10, scrollTrigger: {
               trigger:'.like',
               start: 'top 80%', // Adjust trigger start position as needed
               end: 'bottom 20%', // Adjust trigger end position as needed

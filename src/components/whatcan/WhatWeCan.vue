@@ -1,11 +1,11 @@
 <template>
-  <section class="relative">
+  <section class="relative whatWeCan cursor-hidden">
     <div class="container-fluid">
         <div class="title">
             <p class="leftToRight"> What We Can Do</p>
         </div>
         <div class="content">
-            <div class="cursor"></div>
+            <div class="cursor scaleZero"></div>
             <h6 ><span class="textAnimate">Branding</span> <span class="textAnimate">UI / UX</span> <span class="textAnimate">Lottie</span> <br> <span class="textAnimate">Wordpress</span>  <span class="textAnimate">Webflow</span> <br> <span class="textAnimate">Design</span> <span class="textAnimate">Spline</span> <span class="textAnimate">Laravel</span> </h6>
         </div>
     </div>
@@ -15,13 +15,19 @@
 <script>
 import {gsap} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
     name:'WhatWeCan',
     mounted(){
       this.startAnimation()
+     
+      document.querySelector('.whatWeCan').addEventListener('pointermove', this.mouseMove)
+      document.querySelector('.whatWeCan').addEventListener('pointerleave',function(){
+        let cursor =  document.querySelector('.cursor')
+        cursor.classList.add('scaleZero');
+      })
+      // window.addEventListener('pointerleave')
       
     },
     methods:{
@@ -43,12 +49,21 @@ export default {
               invalidateOnRefresh: true,
               scrub: 1, // Smooth animation
             }})
+      },
+      mouseMove(eve){
+        let cursor =  document.querySelector('.cursor')
+        cursor.style.top = (eve.clientY - 70) + 'px';
+        cursor.style.left = (eve.clientX - 70) + 'px';
+        cursor.classList.remove('scaleZero');
       }
     }
 }
 </script>
 
 <style scoped>
+ .cursor-hidden{
+  cursor: none;
+ }
  .title p {
     font-size: 20px;
  }
@@ -73,9 +88,28 @@ export default {
     background: #FFCF4E;
     border-radius: 100%;
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    animation: scale .4s forwards;
  }
+ @keyframes scale {
+   from{
+    transform: scale(0);
+   }
+   to{
+    transform: scale(1);
+   }
+ }
+ .scaleZero{
+  animation: scaleZero .4s forwards;
+ }
+ @keyframes scaleZero {
+   from{
+    transform: scale(1);
+   }
+   to{
+    transform: scale(0);
+   }
+ }
+
  .textAnimate{
    display: inline-block;
  }

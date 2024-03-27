@@ -36,8 +36,8 @@ export default {
          texts.forEach((text)=>{
             gsap.fromTo(text,{translateY:200,opacity:0},{translateY:0,opacity:1,duration:10, scrollTrigger: {
               trigger: text,
-              start: 'top 100%', // Adjust trigger start position as needed
-              end: 'bottom 60%', // Adjust trigger end position as needed
+              start: 'top 80%', // Adjust trigger start position as needed
+              end: 'bottom 100%', // Adjust trigger end position as needed
               invalidateOnRefresh: true,
               scrub: 1, // Smooth animation
             }})
